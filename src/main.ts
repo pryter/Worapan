@@ -10,15 +10,20 @@ client.on('ready', () => {
 })
 
 client.on("message", async (mess) => {
-  const command: string = mess.content.toLowerCase()
+  const command: string = mess.content
   const voiceChannel: VoiceChannel | null | undefined = mess.member?.voice.channel
   switch (command) {
     case "meow":
       const voiceRoom: VoiceConnection | undefined = await voiceChannel?.join()
       const player = voiceRoom?.play('./assets/sounds/Meow-cat-sound-effect.mp3')
       player?.on('finish', () => {
-        voiceChannel?.leave()
+        mess.channel.send("Meow")
       })
+      break
+    case "Meow":
+      await voiceChannel?.join()
+      mess.channel.send("Meow")
+      break
   }
 })
 
