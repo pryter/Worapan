@@ -1,0 +1,24 @@
+{
+  "name": "Worapan",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "echo 'compiling typscripts..' && tsc && echo 'done'",
+    "start": "node dist/main.js",
+    "build&start": "echo 'compiling typscripts..' && tsc && node dist/main.js"
+  },
+  "repository": "git@github.com:pryter/Worapan.git",
+  "author": "Peter <peterphongpak@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.14.20",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^4.2.7"
+  }
+}
