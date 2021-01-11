@@ -17,12 +17,12 @@ client.on("message", async (mess) => {
       const voiceRoom: VoiceConnection | undefined = await voiceChannel?.join()
       const player = voiceRoom?.play('./assets/sounds/Meow-cat-sound-effect.mp3')
       player?.on('finish', () => {
-        mess.channel.send("Meow")
+        mess.channel.send("MeOw")
       })
       break
     case "Meow":
       await voiceChannel?.join()
-      mess.channel.send("Meow")
+      mess.channel.send("MeOw")
       break
   }
 })
