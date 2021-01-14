@@ -9,7 +9,7 @@ const posiblity: Array<number> = [45,45,10]
 fs.readdir("./assets/sounds", (err,files) => {
   for (let i = 0;i < files.length;i++) {
     for (let times = 0; times < posiblity[i];times++) {
-      sounds.push(files[i])
+      sounds.push(`./assets/sounds/${files[i]}`)
     }
   }
 })
