@@ -4,10 +4,13 @@ import fs from "fs"
 
 const client: Discord.Client = new Discord.Client()
 let sounds: Array<string> = []
+const posiblity: Array<number> = [45,45,10]
 
 fs.readdir("./assets/sounds", (err,files) => {
-  for (const item of files) {
-    sounds.push(`./assets/sounds/${item}`)
+  for (let i = 0;i < files.length;i++) {
+    for (let times = 0; times < posiblity[i];times++) {
+      sounds.push(files[i])
+    }
   }
 })
 
